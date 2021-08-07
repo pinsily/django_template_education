@@ -1,6 +1,8 @@
 ### 说明
 改造来自 bootstrap 教育培训侧使用的模板适配 Django, 没有逻辑处理, 模板来自于 http://www.bootstrapmb.com/item/9982/preview
 
+![image](https://user-images.githubusercontent.com/19889043/128601963-6968e680-71b3-4ddc-ab87-8cb7480d880b.png)
+
 ### 使用
 1、下载
 ```
