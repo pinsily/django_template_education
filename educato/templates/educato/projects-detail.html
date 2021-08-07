@@ -1,0 +1,118 @@
+﻿{% extends 'educato/base.html' %}
+{% load static %}
+{% block title %}详情{% endblock %}
+
+{% block content %}
+    <main>
+
+        <!-- search-popup -->
+        <div class="modal fade bs-example-modal-lg search-bg popup1" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content search-popup">
+                    <div class="text-center">
+                        <a href="#" class="close2" data-dismiss="modal" aria-label="Close">× close</a>
+                    </div>
+                    <div class="row search-outer">
+                        <div class="col-md-11"><input type="text" placeholder="Search for products..." /></div>
+                        <div class="col-md-1 text-right"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /search-popup -->
+        <!-- breadcrumb-area -->
+        <section class="breadcrumb-area d-flex align-items-center" style="background-image:url({% static 'educato/img/testimonial/test-bg.png' %})">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="breadcrumb-wrap text-left">
+                            <div class="breadcrumb-title">
+                                <h2>Gallery Details</h2>
+                                <div class="breadcrumb-wrap">
+
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb">
+                                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+                                        </ol>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- breadcrumb-area-end -->
+        <!-- Project Detail -->
+        <section class="project-detail">
+            <div class="container">
+                <!-- Upper Box -->
+                <div class="upper-box">
+                    <div class="single-item-carousel owl-carousel owl-theme">
+                        <figure class="image"><img src="{% static 'educato/img/gallery/protfolio-dt-img.png' %}" alt=""></figure>
+                    </div>
+                </div>
+
+                <!-- Lower Content -->
+                <div class="lower-content">
+                    <div class="row">
+                        <div class="text-column col-lg-12 col-md-12 col-sm-12">
+                            <div class="inner-column">
+                                <p><span class="dropcap">E</span> Ever heard of Maslow's hierarchy of needs? It's a theory of psychology that prioritizes the most <strong>fundamental human</strong> needs (like air, water, and physical safety) over more advanced needs (like esteem and social belonging). The theory is that you can't achieve the needs at the top without ensuring the more fundamental needs are met first. Love doesn't matter if you don't have food.</p>
+
+                                <p>The world of search engine optimization is complex and ever-changing, but you can easily <strong>understand the basics</strong>, and even a small amount of SEO knowledge can make a big difference. <strong>Free SEO education</strong> is also widely available on the web, including in guides like this! (Woohoo!) This guide is designed to describe all major aspects of SEO, from finding the terms and phrases (keywords) that can generate qualified traffic to your website, to making your site friendly to search engines, to building links and marketing the unique value of your site.</p>
+                                <h4>Using this beginner's guide, we can follow these seven steps to successful SEO:</h4>
+                                <ul class="pr-ul">
+                                    <li>
+                                        <div class="icon"><i class="fal fa-check"></i></div>
+                                        <div class="text pt-10">
+                                            Crawl accessibility so engines can read your website
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fal fa-check"></i></div>
+                                        <div class="text pt-10">
+                                            Share-worthy content that earns links, citations
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fal fa-check"></i></div>
+                                        <div class="text pt-10">
+                                            Keyword optimized to attract searchers & engines
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fal fa-check"></i></div>
+                                        <div class="text pt-10">
+                                            Title, URL, & description to draw high CTR in the rankings
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon"><i class="fal fa-check"></i></div>
+                                        <div class="text pt-10">
+                                            Great user experience including a fast load speed
+                                        </div>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+        <!--End Project Detail -->
+
+
+
+    </main>
+{% endblock %}
+

@@ -1,0 +1,308 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}base{% endblock %}</title>
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="{% static 'educato/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/fontawesome/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/font-flaticon/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/dripicons.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/slick.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/meanmenu.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/default.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'educato/css/responsive.css' %}">
+
+</head>
+<body>
+
+<header class="header-area header-three">
+    <div id="header-sticky" class="menu-area">
+        <div class="container">
+            <div class="second-menu">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-lg-2">
+                        <div class="logo">
+                            <a href="{% url 'educato:index' %}"><img src="{% static 'educato/img/logo/logo.png' %}" alt="logo"></a>
+                        </div>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+
+                        <div class="main-menu text-right text-xl-right">
+                            <nav id="mobile-menu" style="display: block;">
+                                <ul>
+                                    <li class="sub">
+                                        <a href="{% url 'educato:index' %}">Home</a>
+                                    </li>
+                                    <li><a href="{% url 'educato:about' %}">About Us</a></li>
+                                    <li class="sub">
+                                        <a href="{% url 'educato:courses' %}">Courses</a>
+                                        <ul>
+                                            <li><a href="{% url 'educato:courses' %}">Courses</a></li>
+                                            <li><a href="{% url 'educato:courses_details' %}">Courses Details</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="sub">
+                                        <a href="{% url 'educato:events' %}">Events</a>
+                                        <ul>
+                                            <li><a href="{% url 'educato:events' %}">Events</a></li>
+                                            <li><a href="{% url 'educato:events_details' %}">Events Details</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="sub"><a href="#">Pages</a>
+                                        <ul>
+                                            <li><a href="{% url 'educato:gallery' %}">Gallery</a></li>
+                                            <li><a href="{% url 'educato:gallery_detail' %}">Gallery Details</a></li>
+
+                                            <li><a href="{% url 'educato:pricing' %}">Pricing</a></li>
+                                            <li><a href="{% url 'educato:team' %}">Team</a></li>
+                                            <li><a href="{% url 'educato:faq' %}">Faq</a></li>
+                                            <li><a href="{% url 'educato:shop' %}">Shop</a></li>
+                                            <li><a href="{% url 'educato:shop_details' %}">Shop Details</a>
+                                            </li></ul>
+                                    </li>
+
+                                    <li class="sub">
+                                        <a href="{% url 'educato:blog' %}">News</a>
+                                        <ul>
+                                            <li><a href="{% url 'educato:blog' %}">News</a></li>
+                                            <li><a href="{% url 'educato:blog_details' %}">News Details</a></li>
+                                        </ul>
+                                    </li>
+
+
+                                    <li><a href="{% url 'educato:contact' %}">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 text-right d-none d-xl-block mt-30 mb-30">
+                        <div class="search-top2">
+                            <ul>
+                                <li><a href="#" class="menu-tigger"><i class="fas fa-search"></i></a></li>
+                                <li><a href="#" class="menu-tigger"><img src="{% static 'educato/img/icon/menu.png' %}" alt="logo"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-12">
+                        <div class="mobile-menu"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- offcanvas-area -->
+<div class="offcanvas-menu">
+    <span class="menu-close"><i class="fas fa-times"></i></span>
+    <form role="search" method="get" id="searchform"   class="searchform" action="http://wordpress.zcube.in/xconsulta/">
+        <input type="text" name="s" id="search" value="" placeholder="Search"  />
+        <button><i class="fa fa-search"></i></button>
+    </form>
+
+
+    <div id="cssmenu3" class="menu-one-page-menu-container">
+        <ul id="menu-one-page-menu-2" class="menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'educato:index' %}">Home</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'educato:about' %}">About Us</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="services.html">Services</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'educato:pricing' %}">Pricing </a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'educato:team' %}">Team </a></li>
+
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'educato:gallery' %}">Gallery Study</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'educato:blog' %}">Blog</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="{% url 'educato:contact' %}">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="cssmenu2" class="menu-one-page-menu-container">
+        <ul id="menu-one-page-menu-1" class="menu">
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#"><span>+8 12 3456897</span></a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="#"><span>info@example.com</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="offcanvas-overly"></div>
+<!-- offcanvas-end -->
+
+{% block content %}
+{% endblock %}
+
+<!-- footer -->
+<footer class="footer-bg footer-p fix" style=" background-image: url({% static 'educato/img/bg/footer-bg.png' %}); background-repeat: no-repeat; background-position: center;">
+    <div class="footer-top  pt-70 pb-40">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-sm-12">
+                    <div class="footer-widget mb-30">
+
+                        <img src="{% static 'educato/img/logo/f_logo.png' %}" alt="img">
+
+                    </div>
+                </div>
+                <div class="col-xl-7 col-lg-7 col-sm-12">
+                    <div class="footer-widget footer-link mt-20 text-center">
+                        <ul>
+                            <li><a href="{% url 'educato:index' %}">Home</a></li>
+                            <li><a href="{% url 'educato:about' %}"> About Us</a></li>
+                            <li><a href="{% url 'educato:courses' %}"> Courses </a></li>
+                            <li><a href="{% url 'educato:events' %}"> Events</a></li>
+                            <li><a href="{% url 'educato:blog' %}">Blog </a></li>
+                            <li><a href="{% url 'educato:contact' %}">Contact Us </a></li>
+                        </ul>
+
+
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-sm-12">
+                    <div class="footer-widget footer-social mt-15  text-right text-xl-right">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-center  pt-70 pb-40" >
+        <div class="container">
+            <div class="row justify-content-between">
+
+                <div class="col-xl-3 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h2>About Us</h2>
+                        </div>
+                        <div class="footer-link">
+                            Cras faucibus ornare ipsum, non luctus leo imperdiet sit amet. Praesent egestas orci eu risus iaculis luctus. Phasellus maximus orci metus. Nullam enim ex, facilisis at lacinia sed, luctus vitae dolor.
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h2>Contact Us</h2>
+                        </div>
+                        <div class="f-contact">
+                            <ul>
+                                <li>
+                                    <i class="icon fal fa-map-marker-check"></i>
+                                    <span>1247/Plot No. 39, 15th Phase, <br>LHB Colony, Kanpur</span>
+                                </li>
+                                <li>
+                                    <i class="icon fal fa-phone"></i>
+                                    <span>1800-121-3637<br>+91-7052-101-786</span>
+                                </li>
+                                <li><i class="icon fal fa-envelope"></i>
+                                    <span>
+                                            <a href="mailto:info@example.com">info@example.com</a>
+                                       <br>
+                                       <a href="mailto:help@example.com">help@example.com</a>
+                                       </span>
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h2>Our Services</h2>
+                        </div>
+                        <div class="footer-link">
+                            <ul>
+                                <li><a href="{% url 'educato:index' %}">Home</a></li>
+                                <li><a href="{% url 'educato:about' %}"> About Us</a></li>
+                                <li><a href="{% url 'educato:services' %}"> Services </a></li>
+                                <li><a href="{% url 'educato:contact' %}"> Contact Us</a></li>
+                                <li><a href="{% url 'educato:blog' %}">Blog </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-xl-3 col-lg-3 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h2>Our Gallery</h2>
+                        </div>
+                        <div class="f-insta">
+                            <ul>
+                                <li><a href="{% static 'educato/img/instagram/f-galler-01.png' %}" class=" popup-image"><img src="{% static 'educato/img/instagram/f-galler-01.png' %}" alt="img"></a></li>
+                                <li><a href="{% static 'educato/img/instagram/f-galler-02.png' %}" class=" popup-image"><img src="{% static 'educato/img/instagram/f-galler-02.png' %}" alt="img"></a></li>
+                                <li><a href="{% static 'educato/img/instagram/f-galler-03.png' %}" class=" popup-image"><img src="{% static 'educato/img/instagram/f-galler-03.png' %}" alt="img"></a></li>
+                                <li><a href="{% static 'educato/img/instagram/f-galler-04.png' %}" class=" popup-image"><img src="{% static 'educato/img/instagram/f-galler-04.png' %}" alt="img"></a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="copyright-wrap">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    Copyright  &copy; 2021 Luxia. All rights By <a href="http://www.bootstrapmb.com/">bootstrapmb</a>.
+                </div>
+                <div class="col-lg-6 text-right text-xl-right">
+                    <ul>
+                        <li><a href="#">Privercy</a></li>
+                        <li><a href="#">Term & Conditions</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-end -->
+
+<!-- JS here -->
+<script src="{% static 'educato/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{% static 'educato/js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'educato/js/popper.min.js' %}"></script>
+<script src="{% static 'educato/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'educato/js/one-page-nav-min.js' %}"></script>
+<script src="{% static 'educato/js/slick.min.js' %}"></script>
+<script src="{% static 'educato/js/ajax-form.js' %}"></script>
+<script src="{% static 'educato/js/paroller.js' %}"></script>
+<script src="{% static 'educato/js/wow.min.js' %}"></script>
+<script src="{% static 'educato/js/js_isotope.pkgd.min.js' %}"></script>
+<script src="{% static 'educato/js/imagesloaded.min.js' %}"></script>
+<script src="{% static 'educato/js/parallax.min.js' %}"></script>
+<script src="{% static 'educato/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'educato/js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'educato/js/jquery.scrollUp.min.js' %}"></script>
+<script src="{% static 'educato/js/jquery.meanmenu.min.js' %}"></script>
+<script src="{% static 'educato/js/parallax-scroll.js' %}"></script>
+<script src="{% static 'educato/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'educato/js/element-in-view.js' %}"></script>
+<script src="{% static 'educato/js/main.js' %}"></script>
+
+</body>
+</html>
